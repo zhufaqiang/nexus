@@ -1,0 +1,18 @@
+.services-section {
+    position: relative;
+    padding: 4rem 1rem;
+    background: transparent;
+    border-radius: 2rem;
+    margin: 0 auto;
+    z-index: 0;
+    
+    overflow: hidden;
+  }
+  
+  .services-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+  

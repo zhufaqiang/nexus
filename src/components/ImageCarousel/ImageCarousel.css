@@ -1,0 +1,49 @@
+/* ImageCarousel.css */
+
+/* 右側中央にインジケーターを配置 */
+.carousel-indicator {
+    position: absolute;
+    top: 50%; /* 画面の中央に配置 */
+    right: 10px;  /* 画面の右端に配置 */
+    z-index: 50;  /* 他の要素より前面に表示 */
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    gap: 8px; /* ボタン間のスペースを少し減らす */
+    font-size: 1rem; /* ボタンの文字サイズを小さく */
+    font-weight: normal; /* 文字を普通の太さに */
+    color: rgba(255, 255, 255, 0.6); /* 文字色を少し薄い白に */
+    transform: translateY(-50%); /* 中央揃えのためにY軸方向に移動 */
+  }
+  
+  /* ボタンのスタイル */
+  .carousel-btn {
+    background-color: transparent; /* 背景を透明にする */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* 薄い白い境界線 */
+    color: rgba(255, 255, 255, 0.6); /* 文字色を薄い白に設定 */
+    font-size: 1rem; /* ボタンの文字サイズを少し小さく */
+    font-weight: normal; /* 太さを普通に */
+    padding: 5px 10px; /* ボタン内の余白を少し小さく */
+    border-radius: 12px; /* 丸みを帯びたボタン */
+    cursor: pointer; /* マウスオーバー時にカーソルをポインターにする */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.4); /* より薄い白の影 */
+    transition: all 0.3s ease; /* すべてのスタイル変更にアニメーションを追加 */
+    width: 20px; /* ボタンの幅を小さく */
+    height: 20px; /* ボタンの高さを小さく */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ホバー時のスタイル */
+  .carousel-btn:hover {
+    opacity: 0.9; /* ホバー時に少し透明度を下げる */
+    transform: scale(1.1); /* ホバー時に少し拡大 */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* より強い影を追加 */
+  }
+  
+  /* 選択されたボタンのスタイル */
+  .carousel-btn.opacity-100 {
+    opacity: 1; /* 選択されたボタンは完全に不透明 */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8); /* 選択されたボタンは強い影 */
+  }
+  

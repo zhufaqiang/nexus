@@ -1,0 +1,472 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  font-family: 'Noto Sans', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  /* Ensures the header is positioned on top of the video */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  /* Bring header to the top, above the video */
+  /*background-color: transparent;*/
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+  /* Optional: background color with opacity */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(92, 85, 85, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.layout-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-root main {
+  flex: 1;
+}
+
+
+/* デフォルトのスタイル - デスクトップや大きなスクリーン向け */
+.logo-container {
+  display: flex;
+  justify-content: flex-start;
+  /* ロゴを左に配置 */
+  align-items: center;
+  /* ロゴを垂直方向に中央揃え */
+  padding-top: 20px;
+  /* 上部の余白 */
+  padding-left: 20px;
+  /* 左側の余白 */
+}
+
+.logo-container img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* モバイル端末向けにサイズを調整するスタイル */
+@media (max-width: 768px) {
+  .logo-container {
+    padding-top: 2px;
+    /* モバイル端末では上部の余白を少し減らす */
+    padding-left: 15px;
+    /* モバイル端末では左側の余白を少し減らす */
+  }
+
+  .logo-container img {
+    width: 50px;
+    /* モバイル端末の画像の幅を小さく設定 */
+    height: 50px;
+    /* モバイル端末の画像の高さを小さく設定 */
+  }
+}
+
+
+.childContent {
+  padding: 60px 120px 120px 120px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .childContent {
+    padding: 10px 12px 12px 12px;
+  }
+}
+
+.App-footer {
+  position: relative;
+  /* 相対位置指定（他の要素との重なりを制御） */
+  font-size: 0.8rem;
+  /* フッターの文字サイズを小さめに設定 */
+  display: flex;
+  /* Flexbox レイアウトを使用 */
+  flex-direction: column;
+  /* 垂直方向に要素を並べる */
+  justify-content: flex-end;
+  /* 要素を下側に配置（下揃え） */
+  background-color: transparent;
+  /* 背景は透明に */
+  color: white;
+  /* 文字色は白に */
+  z-index: 150;
+  /* 重なり順を指定（ヘッダーなどと干渉しないように） */
+
+  /* 上・左右に20px、下に40pxの余白を設定 */
+  transition: background-color 0.3s ease;
+  /* 背景色の変化にアニメーション効果をつける */
+}
+
+.App-footer.floating {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 150;
+}
+
+.App-footer.scrolled {
+  background-color: rgba(32, 32, 32, 0.678);
+}
+
+.appFooterContractBG {
+  background-color: #adaaaa;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.App-footer-content-smartphone {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  white-space: nowrap;
+  font-size: clamp(0.1rem, 2.5vw, 0.7rem);
+  line-height: 0.5;
+}
+
+.appFooterContractBG-smartphone {
+  background-color: #adaaaa;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.layout-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-root main {
+  flex: 1;
+}
+
+/* Make the navbar align properly */
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+  background-color: #4dd4a1;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #4dd4a1;
+  pointer-events: none;
+  cursor: default;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background-color: #4dd4a1;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+}
+
+.navbar div {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Hide the navbar on small screens and use a hamburger icon */
+.navbar.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.menu-icon .bar {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media query for smaller screens */
+/* スマホ画面（768px以下）のためのメディアクエリ */
+@media (max-width: 768px) {
+
+  /* ナビゲーションメニューの初期設定（非表示） */
+  .navbar {
+    display: none;
+    /* 初期状態ではメニューを非表示 */
+    position: fixed;
+    /* メニューを画面に固定 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.699);
+    /* 半透明の黒背景 */
+    flex-direction: column;
+    /* メニュー項目を縦に並べる */
+    align-items: center;
+    /* 中央揃え */
+    justify-content: center;
+    /* 垂直方向にも中央揃え */
+    z-index: 9000;
+    /* メニューを最前面に表示 */
+    overflow-y: auto;
+    /* メニューが多い場合にスクロール可能 */
+  }
+
+  /* メニューが開いている時 */
+  .navbar.open {
+    display: flex;
+    /* メニューを表示 */
+  }
+
+  /* メニューのリスト */
+  .navbar ul {
+    list-style: none;
+    /* リストのドットを削除 */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* リスト項目を横並びにしない */
+    flex-direction: column;
+    /* 縦に並べる */
+    gap: 20px;
+    /* メニュー項目の間隔を20pxに設定 */
+  }
+
+  /* メニュー項目のスタイル */
+  .navbar div {
+    font-size: 0.8rem;
+    /* フォントサイズを大きめに設定 */
+    text-align: center;
+    /* テキストを中央揃え */
+  }
+
+  /* メニューアイコン（ハンバーガーアイコン）の設定 */
+  .menu-icon {
+    display: block;
+    /* メニューアイコンを表示 */
+    cursor: pointer;
+    /* アイコンがクリック可能に */
+  }
+
+  /* メニューアイコンが開いている時のアニメーション */
+  .menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    /* 上のバーを斜めに回転 */
+  }
+
+  .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+    /* 中央のバーを消す */
+  }
+
+  .menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    /* 下のバーを斜めに回転 */
+  }
+}
+
+/* Hide the footer when the menu is open */
+.navbar.open+.App-footer {
+  display: none;
+}
+
+
+.learnMore-bt {
+  background-color: transparent;
+  border: 2px solid #e5e8eb;
+  color: #e4e9ec;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.scroll-lottie-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+
+  width: 120px;
+  height: 120px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-lottie-wrapper:hover {
+  transform: translateX(-50%) scale(1.1);
+  cursor: pointer;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(270deg,
+      #ff6ec4,
+      #7873f5,
+      #4ade80,
+      #facc15,
+      #ff6ec4);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/*"言語を選択"*/
+.mobile-lang-toggle {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.mobile-lang-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.mobile-lang-button {
+  font-size: 0.8rem;
+  /* just like nav-link */
+  color: white;
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-lang-button:hover,
+.mobile-lang-button.active {
+  color: #faec4c;
+  font-weight: bold;
+}
+
+.mobile-lang-button.active {
+  font-weight: bold;
+  color: #4cfaa0;
+  pointer-events: none;
+  cursor: default;
+}
+
+.mobile-lang-button.active::after {
+  width: 100%;
+  background-color: #73fb42;
+}
+
+/*"言語を選択"*/

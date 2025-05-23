@@ -1,0 +1,52 @@
+.services-section-child {
+  position: relative;
+  padding: 4rem 1rem;
+  background: linear-gradient(to bottom, #cdf0c2c2, #d3dff3b4); /* 粉色渐变蓝紫色 */
+  border-radius: 2rem;
+  margin: 0 auto;
+  z-index: 0;
+  box-shadow: 0 0 30px rgba(250, 210, 255, 0.4); /* 柔和的光晕 */
+  overflow: hidden;
+}
+
+.services-section-child::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top center, rgba(255, 255, 255, 0.3), transparent 70%);
+  z-index: -1;
+}
+
+.summaryText-container-child {
+  position: absolute;
+  justify-content: center;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 102;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  width: 80%;
+  font-size: 0.8rem;
+  backdrop-filter: blur(6px);
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(163, 241, 198, 0.856);
+}
+
+/* スマートフォン向けレスポンシブ調整 */
+@media (max-width: 768px) {
+.summaryText-container-child {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%; /* 少し右側に余白を残す（浮動ボタン用） */
+  font-size: 0.6rem; /* 少し小さめに調整 */
+  padding: 16px; /* パディングも軽く調整 */
+  border-radius: 10px;
+  justify-content: center;
+}
+}

@@ -1,0 +1,111 @@
+.summaryService-container {
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+
+.summaryText-container {
+  position: absolute;
+  top: 14%;
+  left: 5%;
+  z-index: 102;
+  color: whitesmoke;
+  text-align: justify;
+  /* prettier multiline spacing */
+  text-justify: inter-word;
+  /* space adjustment between words */
+  max-width: 600px;
+  /* allow wider layout for English */
+  width: 90%;
+  /* fallback for mobile or tight layouts */
+  line-height: 1.8;
+  /* easier to read, especially for English */
+  font-size: 0.9rem;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+/* スマートフォン向けレスポンシブ調整 */
+@media (max-width: 768px) {
+  .summaryText-container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    /* 少し右側に余白を残す（浮動ボタン用） */
+    font-size: 0.6rem;
+    /* 少し小さめに調整 */
+    padding: 16px;
+    /* パディングも軽く調整 */
+    border-radius: 10px;
+    justify-content: center;
+  }
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.info-card h3 {
+  margin: 0;
+  /* デフォルトのマージンを削除 */
+  padding: 0;
+  /* デフォルトのパディングを削除 */
+  font-size: 0.95rem;
+  /* 適切な文字サイズ */
+  line-height: 1;
+  /* 上下の余白を最小限に */
+  font-weight: normal;
+  /* 必要に応じて調整 */
+}
+
+.info-card.vertical {
+  writing-mode: vertical-rl;
+  text-align: center;
+  width: 25px;
+  height: 120px;
+}
+
+.info-card.horizontal {
+  writing-mode: horizontal-tb;
+  text-align: center;
+  min-width: 80px;
+  height: 50px;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 80px;
+}
+
+.section-detail {
+  background-color: rgba(255, 250, 250, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+}

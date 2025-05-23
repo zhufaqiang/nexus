@@ -1,0 +1,73 @@
+/* Language Switcher Container */
+.language-switcher-container {
+    display: flex;
+    justify-content: center;
+    padding-right: 1rem; /* Optional: Adjust the padding as needed */
+  }
+  
+  /* Language Switcher Button and Dropdown */
+  .language-switcher {
+    position: relative;
+    width: 10rem; /* You can adjust this width as necessary */
+  }
+  
+  /* Button Styling */
+  .language-switcher-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: transparent;
+    border: 2px solid #e5e8eb;
+    color: #e4e9ec;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0.375rem;
+  }
+  
+  /* Text (Language Name) */
+  .language-switcher-text {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 60%; /* 60% width for text */
+    text-align: left;
+    white-space: nowrap;
+    color: white;
+  }
+  
+  /* Dropdown Arrow Icon */
+  .language-switcher-svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 0.5rem; /* Space between text and arrow */
+    color: #e4e9ec; /* Arrow color */
+  }
+  
+  /* Dropdown Options (Language List) */
+  .language-switcher-options {
+    position: absolute;
+    margin-top: 0.25rem;
+    width: 100%;
+    background-color: rgba(56, 56, 56, 0.8); /* Slight opacity */
+    color: white;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* z-index: 10;
+    pointer-events: none; */
+  }
+  
+  /* Individual Option Styling */
+  .language-switcher-option {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect on options */
+  .language-switcher-option:hover {
+    background-color: white;
+    color: black;
+  }
+  

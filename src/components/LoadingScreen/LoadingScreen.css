@@ -1,0 +1,60 @@
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+.loading-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-screen.show {
+  opacity: 1;
+}
+
+.loading-text-container {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.loading-bar {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 200%;
+  height: 40px;
+  transform: translateY(-50%);
+  background: linear-gradient(to right, black 0%, white 50%, black 100%);
+  animation: slide 2s linear infinite;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.loading-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+}

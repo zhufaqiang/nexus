@@ -1,0 +1,43 @@
+
+.summaryText-container-child {
+  position: absolute;
+  top: 14%;
+  left: 5%;
+  z-index: 102;
+  color: whitesmoke;
+  text-align: justify;
+  /* prettier multiline spacing */
+  text-justify: inter-word;
+  /* space adjustment between words */
+  max-width: 900px;
+  /* allow wider layout for English */
+  width: 90%;
+  /* fallback for mobile or tight layouts */
+  line-height: 1.8;
+  /* easier to read, especially for English */
+  font-size: 0.9rem;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+/* スマートフォン向けレスポンシブ調整 */
+@media (max-width: 768px) {
+  .summaryText-container-child {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    /* 少し右側に余白を残す（浮動ボタン用） */
+    font-size: 0.6rem;
+    /* 少し小さめに調整 */
+    padding: 16px;
+    /* パディングも軽く調整 */
+    border-radius: 10px;
+    justify-content: center;
+  }
+}

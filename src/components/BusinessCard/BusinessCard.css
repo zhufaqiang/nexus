@@ -1,0 +1,105 @@
+.business-card {
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 1.5rem; 
+  text-align: center;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0; 
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  background: linear-gradient(to bottom, #cfccceda, #e0e5ed87); /* 粉色渐变蓝紫色 */
+  box-shadow: 0 0 30px rgba(250, 210, 255, 0.4); /* 柔和的光晕 */
+}
+
+.business-card::before{
+  background: radial-gradient(circle at top center, rgba(255, 255, 255, 0.3), transparent 70%);
+}
+
+.business-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-wrapper {
+  margin-bottom: 1rem;
+}
+
+.icon-wrapper svg {
+  width: 40px;   
+  height: 40px;
+}
+
+.card-title {
+  font-size: 1.1rem;      
+  font-weight: 500;          
+  margin-bottom: 0.4rem;
+}
+
+.card-description {
+  font-size: 0.7rem;       
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  line-height: 1.5;
+  max-height: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.read-button {
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #9e8f9969; 
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.read-button:hover {
+  background-color: #2563eb; /* hover: 深一点的蓝色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+
+/* BusinessCarousel.css */
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  gap: 1.5rem; /* Space between grid items */
+  max-width: 72rem; /* Same as max-w-6xl */
+  margin-left: auto; /* Center alignment */
+  margin-right: auto; /* Center alignment */
+}
+
+/* When the screen width is 768px or smaller, use 2 columns */
+@media (max-width: 768px) {
+  .business-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+
+/* When the screen width is 640px or smaller, use 1 column */
+@media (max-width: 640px) {
+  .business-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile screens */
+  }
+}
+
+
+
