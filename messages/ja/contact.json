@@ -1,0 +1,14 @@
+{
+  "pg004_access_title": "会社アクセス",
+  "pg004_office_marunouchi": "丸の内オフィス",
+  "pg004_office_marunouchi_address": "〒100-0005 東京都千代田区丸の内3丁目4-2 新日石ビルヂング7階713",
+  "pg004_office_nihonbashi": "日本橋オフィス",
+  "pg004_office_nihonbashi_address": "〒103-0002 東京都中央区日本橋馬喰町1丁目12-7 シティハイツ日本橋202",
+  "pg004_contact_title": "お問い合わせ方法",
+  "pg004_contact_instruction": "下記の方法でお気軽にお問い合わせください。",
+  "pg004_form_title": "メールでのお問い合わせ",
+  "pg004_form_name": "お名前",
+  "pg004_form_phone": "電話番号",
+  "pg004_form_message": "メッセージ",
+  "pg004_form_submit": "送信"
+}

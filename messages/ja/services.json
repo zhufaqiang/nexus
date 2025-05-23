@@ -1,0 +1,17 @@
+{
+  "pg003_title": "事業内容",
+  "pg003_paragraph_1": "私たちは不動産を中心に多様なサービスを提供しています。お客様のニーズに合わせ、柔軟かつ専門的な対応を行います。",
+  "pg003_services_title": "サービス一覧",
+  "card_sales_title": "不動産売買の仲介",
+  "card_sales_desc": "住宅・商業用不動産の売買をサポートします。",
+  "card_rent_title": "不動産賃貸の仲介",
+  "card_rent_desc": "賃貸物件の紹介・契約支援を行います。",
+  "card_manage_title": "不動産の管理",
+  "card_manage_desc": "賃貸管理・ビルメンテナンスなども対応可能です。",
+  "card_consult_title": "コンサルティング",
+  "card_consult_desc": "不動産活用・投資に関する助言を提供します。",
+  "card_dev_title": "不動産開発や企画",
+  "card_dev_desc": "開発プロジェクトの立案支援を行います。",
+  "card_fin_title": "関連金融サービス",
+  "card_fin_desc": "住宅ローン、保険など多様なサービスを提供します。"
+}

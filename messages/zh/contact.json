@@ -1,0 +1,14 @@
+{
+  "pg004_access_title": "公司地址",
+  "pg004_office_marunouchi": "丸之内办公室",
+  "pg004_office_marunouchi_address": "东京都千代田区丸之内3丁目4-2 新日石大厦7楼713室，邮编100-0005",
+  "pg004_office_nihonbashi": "日本桥办公室",
+  "pg004_office_nihonbashi_address": "东京都中央区日本桥马喰町1丁目12-7 日本桥城市高层202室，邮编103-0002",
+  "pg004_contact_title": "联系方式",
+  "pg004_contact_instruction": "欢迎通过以下方式与我们联系。",
+  "pg004_form_title": "通过电子邮件联系",
+  "pg004_form_name": "姓名",
+  "pg004_form_phone": "电话号码",
+  "pg004_form_message": "留言内容",
+  "pg004_form_submit": "发送"
+}

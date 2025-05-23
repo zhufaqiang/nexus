@@ -1,0 +1,17 @@
+{
+  "pg003_title": "我们的服务",
+  "pg003_paragraph_1": "我们以房地产为核心，提供多样化的专业服务，灵活应对每一位客户的不同需求。",
+  "pg003_services_title": "服务总览",
+   "card_sales_title": "房产买卖中介",
+  "card_sales_desc": "我们支持住宅与商业不动产的买卖服务。",
+  "card_rent_title": "房产租赁中介",
+  "card_rent_desc": "我们介绍出租房源，并提供合同支持。",
+  "card_manage_title": "房产管理",
+  "card_manage_desc": "我们也提供租赁管理和大楼维护服务。",
+  "card_consult_title": "咨询服务",
+  "card_consult_desc": "我们提供关于房产活用与投资的建议。",
+  "card_dev_title": "开发与企划",
+  "card_dev_desc": "我们协助房地产开发项目的策划与执行。",
+  "card_fin_title": "金融相关服务",
+  "card_fin_desc": "提供住房贷款、保险等多样化金融服务。"
+}

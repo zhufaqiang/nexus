@@ -1,0 +1,14 @@
+{
+  "pg004_access_title": "Company Access",
+  "pg004_office_marunouchi": "Marunouchi Office",
+  "pg004_office_marunouchi_address": "7F-713, Shin-Nisseki Building, 3-4-2 Marunouchi, Chiyoda-ku, Tokyo 100-0005",
+  "pg004_office_nihonbashi": "Nihonbashi Office",
+  "pg004_office_nihonbashi_address": "202 City Heights Nihonbashi, 1-12-7 Bakurocho, Nihonbashi, Chuo-ku, Tokyo 103-0002",
+  "pg004_contact_title": "Contact Methods",
+  "pg004_contact_instruction": "Feel free to reach out to us using the methods below.",
+  "pg004_form_title": "Contact via Email",
+  "pg004_form_name": "Your Name",
+  "pg004_form_phone": "Phone Number",
+  "pg004_form_message": "Message",
+  "pg004_form_submit": "Submit"
+}

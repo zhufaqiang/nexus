@@ -1,0 +1,18 @@
+{
+  "pg003_title": "Our Services",
+  "pg003_paragraph_1": "We offer a wide range of services centered around real estate. With flexibility and expertise, we respond to every client's unique needs.",
+  "pg003_services_title": "Service Overview",
+   "card_sales_title": "Property Sales Brokerage",
+  "card_sales_desc": "We support the buying and selling of residential and commercial real estate.",
+  "card_rent_title": "Rental Property Brokerage",
+  "card_rent_desc": "We introduce rental properties and assist with contracts.",
+  "card_manage_title": "Property Management",
+  "card_manage_desc": "We offer rental management and building maintenance services.",
+  "card_consult_title": "Consulting",
+  "card_consult_desc": "We provide advice on real estate usage and investment.",
+  "card_dev_title": "Real Estate Development",
+  "card_dev_desc": "We assist in planning and managing development projects.",
+  "card_fin_title": "Financial Services",
+  "card_fin_desc": "We offer a range of services including mortgages and insurance."
+
+}
